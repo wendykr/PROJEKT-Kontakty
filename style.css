@@ -33,6 +33,7 @@ h1 {
 
 .foto {
 	max-width: 100%;
+	height: auto;
 	border-radius: 50%;
 }
 
@@ -53,7 +54,26 @@ h1 {
 		border: 1px solid gainsboro;
 		border-radius: 5px;
 		padding: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.leva {
+		flex: 1 1 15%;
+		text-align: center;
+	}
+
+	.prava {
+		flex: 1 1 85%;
 		text-align: left;
+	}
+
+	.foto {
+		max-width: 75px;
+		height: 75px;
+		border-radius: 50%;
 	}
 }
 
@@ -76,5 +96,15 @@ h1 {
 		margin: 0px;
 		text-align: center;
 		display: inline-block;
+	}
+
+	.leva, .prava {
+		text-align: center;
+	}
+
+	.foto {
+		max-width: 100%;
+		height: auto;
+		border-radius: 50%;
 	}
 }
