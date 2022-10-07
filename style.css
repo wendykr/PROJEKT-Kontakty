@@ -15,3 +15,66 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
+
+h1 {
+	text-align: center;
+}
+
+.zena {
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+}
+
+.zena + .zena {
+	margin-top: 5px;
+}
+
+.foto {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+
+@media screen and (min-width: 540px) {
+	.zena + .zena {
+		margin-top: 0;
+	}
+
+	.kontejner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px 10px;
+	}
+
+	.zena {
+		flex: 0 0 calc((100% - 20px) / 2);
+		border: 1px solid gainsboro;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.zena + .zena {
+		margin-top: 0;
+	}
+
+	.kontejner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.zena {
+		flex: 0 0 calc(25% - (40px / 4));
+		border: 1px solid gainsboro;
+		border-radius: 5px;
+		padding: 10px;
+		margin: 0px;
+		text-align: center;
+		display: inline-block;
+	}
+}
